@@ -1,0 +1,8 @@
+^test\.Rproj$
+^\.Rproj\.user$
+^.vscode$
+^LICENSE\.md$
+^README\.Rmd$
+^.Rprofile$
+^dev.R$
+^TODO.md$

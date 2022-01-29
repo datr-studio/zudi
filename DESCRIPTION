@@ -1,16 +1,23 @@
 Package: zudi
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Common data tasks zuud!
+Version: 0.1.0
 Authors@R: 
     person("Josh", "Firth", , "drjoshfirth@gmailcom", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3815-8789"))
-Description: What the package does (one paragraph).
+Description: Zuud means fast in Persian. And now, it means fast in R as
+    well.
 License: GPL (>= 3)
+URL: https://github.com/datr-studio/zudi
+BugReports: https://github.com/datr-studio/zudi/issues
+Imports: 
+    cli,
+    data.table,
+    feather,
+    tibble
 Suggests: 
+    purrr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-URL: https://github.com/datr-studio/zudi
-BugReports: https://github.com/datr-studio/zudi/issues

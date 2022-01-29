@@ -1,35 +1,21 @@
 # Operators ---------------------------------------------------------------
 #'
 
-`%+%` <- function(a, b) {
-  if (is.character(a) && is.character(b)) {
-    paste0(a, b)
-  } else {
-    stop("%+% requires two strings")
-  }
-}
-
-`%||%` <- function(a, b) ifelse(!is.null(a), a, b)
+`%||%` <- function(a, b) ifelse(!is.null(a), a, b) # nolint
 
 # Type Checking ---------------------------------------------------------------
 #'
 
-assert <- function(x, y) {
-  if (!is.null(x)) {
-    if (!inherits(x, y)) {
-      stop(deparse(substitute(x)), " must be of class ",
-        paste0(y, collapse = ","),
-        call. = FALSE
-      )
-    }
+
+check_type <- function(arg, exp_type) {
+  arg_name <- deparse(substitute(arg))
+  if (!inherits(arg, exp_type)) {
+    show_var_wrong_type_error(arg, arg_name, exp_type)
   }
 }
 
 
-# Lists ---------------------------------------------------------------
-#'
 
-compact <- function(l) Filter(Negate(is.null), l)
 
 # Regex ---------------------------------------------------------------
 #'

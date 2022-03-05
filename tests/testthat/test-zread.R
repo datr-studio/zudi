@@ -41,6 +41,6 @@ test_that("zread works for delims", {
   }
   # End Setup
 
-  x <- zread(".", pattern = pattern, parallel = FALSE, cache = FALSE)
+  x <- zread(".", pattern = pattern, parallel = FALSE)
   expect_equal(nrow(x), nrow(mtcars) * 3)
 })

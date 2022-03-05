@@ -5,7 +5,7 @@
 #' @param x A dataframe..
 #'
 #' @export
-#' @importFrom tibble as_tibble
+#' @importFrom dplyr as_tibble
 #' @import data.table
 #'
 #' @return A tibble
@@ -16,7 +16,7 @@
 #' x <- list(a = 1, b = 1:5)
 #' zbind(list(x, x, x))
 zbind <- function(x) {
-  tibble::as_tibble((x <- data.table::setDF(
+  dplyr::as_tibble((x <- data.table::setDF(
     data.table::rbindlist(x, use.names = TRUE, fill = TRUE, idcol = "id")
   )
   ))

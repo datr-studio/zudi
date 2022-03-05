@@ -12,8 +12,10 @@ BugReports: https://github.com/datr-studio/zudi/issues
 Imports: 
     cli,
     data.table,
+    dplyr,
+    dtplyr,
     feather,
-    tibble
+    magrittr
 Suggests: 
     purrr,
     testthat (>= 3.0.0)

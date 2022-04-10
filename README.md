@@ -90,6 +90,6 @@ zaggregate(y, x, z = mean(y))
 
 ## About the name Zudi
 
-Fun fact: the word “zuud” in Farsi means fast or quick, hence the name
+Fun fact: the word “zud” in Farsi means fast or quick, hence the name
 and is a credit to my beautiful Persian wife. Zudi, roughly translated,
-means `something fast`.
+means “something fast”.

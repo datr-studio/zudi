@@ -1,8 +1,3 @@
-# Operators ---------------------------------------------------------------
-#'
-
-`%||%` <- function(a, b) ifelse(!is.null(a), a, b) # nolint
-
 # Type Checking ---------------------------------------------------------------
 #'
 
@@ -14,7 +9,9 @@ check_type <- function(arg, exp_type) {
   }
 }
 
-
+check_exists <- function(filepath) {
+  if (!file.exists(filepath)) abort_folder_not_found(file.path(getwd(), filepath))
+}
 
 
 # Regex ---------------------------------------------------------------

@@ -27,6 +27,11 @@ abort_no_files <- function(dir) {
   abort(msg)
 }
 
+abort_folder_not_found <- function(dir) {
+  msg <- cli::format_inline("Error: The directory {.path {dir}} doesn't exist.")
+  abort(msg)
+}
+
 abort_empty_dir <- function(dir) {
   msg <- cli::format_inline("Error: {.path {dir}} is empty.")
   abort(msg)

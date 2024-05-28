@@ -9,7 +9,7 @@
 #' @param pattern Optional regex pattern to filter.
 #' @param parallel If `TRUE` (and available on the machine), `zread()` will attempt to
 #' use parallel processing. This may incur a small overhead cost that outweighs
-#' the benefits on small datasets.
+#' the benefits on large datasets.
 #'
 #' @export
 #' @import cli
@@ -22,6 +22,9 @@
 # ' zread("path/to/allmyfiles", "^log_")
 # ' }
 zread <- function(dir, pattern = NULL, parallel = TRUE) {
+  # Check dir exists
+  check_exists(dir)
+
   # Get Files
   if (!is.null(pattern)) {
     files <- list.files(dir, pattern = pattern, full.names = T)
